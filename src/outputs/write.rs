@@ -73,7 +73,7 @@ impl ParseOutputWriter {
 
             for (wrapped_unique_id, player_df) in _data_frames_output.players.iter() {
                 let mut player_data_frame_path = self.output_dir.clone();
-                player_data_frame_path.push(format!("player_{}", wrapped_unique_id.to_string()));
+                player_data_frame_path.push(format!("player_{}", wrapped_unique_id));
                 write_df(player_data_frame_path, player_df, data_frame_output_format)?;
             }
         }

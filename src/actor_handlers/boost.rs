@@ -68,7 +68,7 @@ impl TimeSeriesBoostData {
         if let Some(Attribute::ReplicatedBoost(_boost_amount)) =
             attributes.get("TAGame.CarComponent_Boost_TA:ReplicatedBoost")
         {
-            boost_amount = Some((*_boost_amount).boost_amount as f32 / 2.55);
+            boost_amount = Some(_boost_amount.boost_amount as f32 / 2.55);
         }
         else if let Some(Attribute::Byte(_boost_amount)) =
             attributes.get("TAGame.CarComponent_Boost_TA:ReplicatedBoostAmount")
